@@ -39,51 +39,51 @@ function App() {
       key: "niki",
       title: "Every Summertime",
       artist: "NIKI",
-      src: "/memories/chapter-10/every-summertime.mp3",
+      src: asset("memories/chapter-10/every-summertime.mp3"),
     },
     {
       key: "sza",
       title: "Snooze",
       artist: "SZA",
-      src: "/memories/chapter-10/snooze.mp3",
+      src: asset("memories/chapter-10/snooze.mp3"),
     },
     {
       key: "taylor",
       title: "Daylight",
       artist: "Taylor Swift",
-      src: "/memories/chapter-10/daylight.mp3",
+      src: asset("memories/chapter-10/daylight.mp3"),
     },
   ];
 
   useEffect(() => {
     const imageAssets = [
-      "/memories/chapter-01/hero.jpg",
-      "/memories/chapter-02/coffee-shop.jpg",
-      "/memories/chapter-02/coffee-detail.jpg",
-      "/memories/chapter-04/picc.jpg",
-      "/memories/chapter-04/family.jpg",
-      "/memories/adventures/iloilo-poster.jpg",
-      "/memories/adventures/antipolo.jpg",
-      "/memories/adventures/zambales-poster.jpg",
-      "/memories/chapter-07/2022-fixed.jpg",
-      "/memories/chapter-07/2023.jpg",
-      "/memories/chapter-07/2024.jpg",
-      "/memories/chapter-07/2025.jpg",
-      "/memories/chapter-07/2026.jpg",
-      "/memories/chapter-08/then.jpg",
-      "/memories/chapter-08/now.jpg",
-      "/memories/chapter-10/niki.jpg",
-      "/memories/chapter-10/sza.jpg",
-      "/memories/chapter-10/taylor.jpg",
+      asset("memories/chapter-01/hero.jpg"),
+      asset("memories/chapter-02/coffee-shop.jpg"),
+      asset("memories/chapter-02/coffee-detail.jpg"),
+      asset("memories/chapter-04/picc.jpg"),
+      asset("memories/chapter-04/family.jpg"),
+      asset("memories/adventures/iloilo-poster.jpg"),
+      asset("memories/adventures/antipolo.jpg"),
+      asset("memories/adventures/zambales-poster.jpg"),
+      asset("memories/chapter-07/2022-fixed.jpg"),
+      asset("memories/chapter-07/2023.jpg"),
+      asset("memories/chapter-07/2024.jpg"),
+      asset("memories/chapter-07/2025.jpg"),
+      asset("memories/chapter-07/2026.jpg"),
+      asset("memories/chapter-08/then.jpg"),
+      asset("memories/chapter-08/now.jpg"),
+      asset("memories/chapter-10/niki.jpg"),
+      asset("memories/chapter-10/sza.jpg"),
+      asset("memories/chapter-10/taylor.jpg"),
     ];
 
     const audioAssets = backgroundTracks.map((track) => track.src);
 
     const videoAssets = [
-      "/memories/adventures/iloilo.mp4",
-      "/memories/adventures/zambales.mp4",
-      "/memories/chapter-09/izuhaan.mp4",
-      "/memories/chapter-09/karen.mp4",
+      asset("memories/adventures/iloilo.mp4"),
+      asset("memories/adventures/zambales.mp4"),
+      asset("memories/chapter-09/izuhaan.mp4"),
+      asset("memories/chapter-09/karen.mp4"),
     ];
 
     const totalAssets = imageAssets.length + audioAssets.length + videoAssets.length;
@@ -797,7 +797,7 @@ function App() {
                   onClick={() => chooseOpeningTrack(0)}
                 >
                   <span className="soundtrack-gate-cover">
-                    <img src="/memories/chapter-10/niki.jpg" alt="Every Summertime" />
+                    <img src={asset("memories/chapter-10/niki.jpg")} alt="Every Summertime" />
                     <span className="soundtrack-gate-play">▶</span>
                   </span>
 
@@ -818,7 +818,7 @@ function App() {
                   onClick={() => chooseOpeningTrack(1)}
                 >
                   <span className="soundtrack-gate-cover">
-                    <img src="/memories/chapter-10/sza.jpg" alt="Snooze" />
+                    <img src={asset("memories/chapter-10/sza.jpg")} alt="Snooze" />
                     <span className="soundtrack-gate-play">▶</span>
                   </span>
 
@@ -839,7 +839,7 @@ function App() {
                   onClick={() => chooseOpeningTrack(2)}
                 >
                   <span className="soundtrack-gate-cover">
-                    <img src="/memories/chapter-10/taylor.jpg" alt="Daylight" />
+                    <img src={asset("memories/chapter-10/taylor.jpg")} alt="Daylight" />
                     <span className="soundtrack-gate-play">▶</span>
                   </span>
 
@@ -899,7 +899,7 @@ function App() {
 
               <div className="memory-frame chapter-one-memory actual-memory">
                 <img
-                  src="/memories/chapter-01/hero.jpg"
+                  src={asset("memories/chapter-01/hero.jpg")}
                   alt="A memory from August 2022"
                 />
                 <div className="memory-placeholder">
@@ -967,7 +967,7 @@ function App() {
               <div className="coffee-layout">
                 <div className="memory-frame coffee-memory chapter-two-memory actual-memory">
                   <img
-                    src="/memories/chapter-02/coffee-shop.jpg"
+                    src={asset("memories/chapter-02/coffee-shop.jpg")}
                     alt="The coffee shop memory"
                   />
                 </div>
@@ -1027,7 +1027,7 @@ function App() {
 
                   <div className="memory-frame small-memory chapter-two-detail actual-memory">
                     <img
-                      src="/memories/chapter-02/coffee-detail.jpg"
+                      src={asset("memories/chapter-02/coffee-detail.jpg")}
                       alt="A detail from the coffee shop memory"
                     />
                   </div>
@@ -1301,7 +1301,7 @@ function App() {
               <div className="family-photo-grid">
                 <div className="memory-frame family-memory actual-memory">
                   <img
-                    src="/memories/chapter-04/picc.jpg"
+                    src={asset("memories/chapter-04/picc.jpg")}
                     alt="PICC graduation memory"
                   />
 
@@ -1313,7 +1313,7 @@ function App() {
 
                 <div className="memory-frame family-memory actual-memory">
                   <img
-                    src="/memories/chapter-04/family.jpg"
+                    src={asset("memories/chapter-04/family.jpg")}
                     alt="Meeting the family memory"
                   />
 
@@ -1515,7 +1515,7 @@ function App() {
                       {!adventureVideoReady ? (
                         <img
                           className="adventure-video-poster"
-                          src="/memories/adventures/iloilo-poster.jpg"
+                          src={asset("memories/adventures/iloilo-poster.jpg")}
                           alt="Iloilo memory"
                         />
                       ) : (
@@ -1527,7 +1527,7 @@ function App() {
                           playsInline
                         >
                           <source
-                            src="/memories/adventures/iloilo.mp4"
+                            src={asset("memories/adventures/iloilo.mp4")}
                             type="video/mp4"
                           />
                         </video>
@@ -1538,7 +1538,7 @@ function App() {
                   {adventure === "antipolo" && (
                     <>
                       <img
-                        src="/memories/adventures/antipolo.jpg"
+                        src={asset("memories/adventures/antipolo.jpg")}
                         alt="Antipolo memory"
                       />
 
@@ -1554,7 +1554,7 @@ function App() {
                       {!adventureVideoReady ? (
                         <img
                           className="adventure-video-poster"
-                          src="/memories/adventures/zambales-poster.jpg"
+                          src={asset("memories/adventures/zambales-poster.jpg")}
                           alt="Zambales memory"
                         />
                       ) : (
@@ -1566,7 +1566,7 @@ function App() {
                           playsInline
                         >
                           <source
-                            src="/memories/adventures/zambales.mp4"
+                            src={asset("memories/adventures/zambales.mp4")}
                             type="video/mp4"
                           />
                         </video>
@@ -2242,7 +2242,7 @@ function App() {
                     <div className="growth-story-memory">
                       <div className="growth-story-photo">
                         <img
-                          src="/memories/chapter-07/2022-fixed.jpg"
+                          src={asset("memories/chapter-07/2022-fixed.jpg")}
                           alt="A memory from 2022"
                         />
                       </div>
@@ -2279,7 +2279,7 @@ function App() {
                     <div className="growth-story-memory">
                       <div className="growth-story-photo">
                         <img
-                          src="/memories/chapter-07/2023.jpg"
+                          src={asset("memories/chapter-07/2023.jpg")}
                           alt="A memory from 2023"
                         />
                       </div>
@@ -2316,7 +2316,7 @@ function App() {
                     <div className="growth-story-memory">
                       <div className="growth-story-photo">
                         <img
-                          src="/memories/chapter-07/2024.jpg"
+                          src={asset("memories/chapter-07/2024.jpg")}
                           alt="A memory from 2024"
                         />
                       </div>
@@ -2353,7 +2353,7 @@ function App() {
                     <div className="growth-story-memory">
                       <div className="growth-story-photo">
                         <img
-                          src="/memories/chapter-07/2025.jpg"
+                          src={asset("memories/chapter-07/2025.jpg")}
                           alt="A memory from 2025"
                         />
                       </div>
@@ -2389,7 +2389,7 @@ function App() {
                     <div className="growth-story-memory">
                       <div className="growth-story-photo">
                         <img
-                          src="/memories/chapter-07/2026.jpg"
+                          src={asset("memories/chapter-07/2026.jpg")}
                           alt="A memory from 2026"
                         />
                       </div>
@@ -2536,7 +2536,7 @@ function App() {
                   <div className="becoming-panel">
                     <div className="becoming-photo">
                       <img
-                        src="/memories/chapter-08/then.jpg"
+                        src={asset("memories/chapter-08/then.jpg")}
                         alt="Angel in 2022"
                       />
 
@@ -2582,7 +2582,7 @@ function App() {
                   <div className="becoming-panel">
                     <div className="becoming-photo">
                       <img
-                        src="/memories/chapter-08/now.jpg"
+                        src={asset("memories/chapter-08/now.jpg")}
                         alt="Angel in 2026"
                       />
 
@@ -2811,7 +2811,7 @@ function App() {
                         onEnded={resumeBackgroundMusic}
                       >
                         <source
-                          src="/memories/chapter-09/izuhaan.mp4"
+                          src={asset("memories/chapter-09/izuhaan.mp4")}
                           type="video/mp4"
                         />
                       </video>
@@ -2841,7 +2841,7 @@ function App() {
                         onEnded={resumeBackgroundMusic}
                       >
                         <source
-                          src="/memories/chapter-09/karen.mp4"
+                          src={asset("memories/chapter-09/karen.mp4")}
                           type="video/mp4"
                         />
                       </video>
@@ -3095,10 +3095,10 @@ function App() {
                     <img
                       src={
                         soundtrackTrack === "niki"
-                          ? "/memories/chapter-10/niki.jpg"
+                          ? asset("memories/chapter-10/niki.jpg")
                           : soundtrackTrack === "sza"
-                            ? "/memories/chapter-10/sza.jpg"
-                            : "/memories/chapter-10/taylor.jpg"
+                            ? asset("memories/chapter-10/sza.jpg")
+                            : asset("memories/chapter-10/taylor.jpg")
                       }
                       alt={`${backgroundTracks[backgroundTrackIndex].title} cover`}
                     />
@@ -3153,10 +3153,10 @@ function App() {
                         <img
                           src={
                             index === 0
-                              ? "/memories/chapter-10/niki.jpg"
+                              ? asset("memories/chapter-10/niki.jpg")
                               : index === 1
-                                ? "/memories/chapter-10/sza.jpg"
-                                : "/memories/chapter-10/taylor.jpg"
+                                ? asset("memories/chapter-10/sza.jpg")
+                                : asset("memories/chapter-10/taylor.jpg")
                           }
                           alt=""
                         />
@@ -3243,7 +3243,7 @@ function App() {
                     <div className="soundtrack-memory-content">
                       <div className="soundtrack-memory-photo">
                         <img
-                          src="/memories/chapter-10/niki.jpg"
+                          src={asset("memories/chapter-10/niki.jpg")}
                           alt="Every Summertime memory"
                         />
                       </div>
@@ -3289,7 +3289,7 @@ function App() {
                     <div className="soundtrack-memory-content">
                       <div className="soundtrack-memory-photo">
                         <img
-                          src="/memories/chapter-10/sza.jpg"
+                          src={asset("memories/chapter-10/sza.jpg")}
                           alt="Snooze memory"
                         />
                       </div>
@@ -3334,7 +3334,7 @@ function App() {
                     <div className="soundtrack-memory-content">
                       <div className="soundtrack-memory-photo">
                         <img
-                          src="/memories/chapter-10/taylor.jpg"
+                          src={asset("memories/chapter-10/taylor.jpg")}
                           alt="Daylight memory"
                         />
                       </div>
